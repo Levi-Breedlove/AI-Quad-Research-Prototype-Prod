@@ -315,11 +315,15 @@ Export the mind map to docs/workflows.mmd.
 
 **Template (Mermaid mindmap):**
 ```mermaid
-%%{init: {
-  "theme": "base",
-  "logLevel": "fatal",
-  "themeVariables": { "background": "transparent", "primaryTextColor": "#ffffff" },
-  "themeCSS": ".mindmap-node text, .label, .edgeLabel { fill:#ffffff !important; color:#ffffff !important; }"
+%%{init:{
+  "theme":"base",
+  "logLevel":"fatal",
+  "themeVariables":{"background":"transparent"},
+  "themeCSS":"
+    .mindmap-node text, .label, .edgeLabel { fill:#ffffff !important; color:#ffffff !important; }
+    .mindmap-node rect, .mindmap-node circle, .mindmap-node polygon { fill:#111827 !important; stroke:#4b5563 !important; }
+    .mindmap-branch path, .edgePath .path { stroke:#64748b !important; }
+  "
 }}%%
 mindmap
   root(("insert marketing project focus here"))
@@ -340,6 +344,7 @@ mindmap
       "Result / Detail"
       "Export / Share"
       "Saved Variant"
+
 
 ```
 
