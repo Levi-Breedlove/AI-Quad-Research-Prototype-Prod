@@ -1,6 +1,6 @@
 # AI Quad-Tool Workflow — Pain Points to Prototype to Production
 
-*A pipeline for building applications from an idea into a research-backed prototype with a wireframed front end and AWS cloud architecture using **GPT-5**, **Notebook LLM**, **Claude (Kiro)**, and **Amazon Q**. This approach includes an MCP bridge to render icon-accurate AWS diagrams.*
+*A pipeline for building applications from an idea into a research-backed prototype with a wireframed front end. **GPT-5**, **Notebook LLM**, **Claude (Kiro)**, and **Amazon Q**. This approach includes an MCP bridge to render icon-accurate AWS diagrams.*
 
 > Replace **“insert marketing project focus here”** with your actual campaign, product, or application in all prompts and examples.
 
