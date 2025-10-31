@@ -315,7 +315,12 @@ Export the mind map to docs/workflows.mmd.
 
 **Template (Mermaid mindmap):**
 ```mermaid
-%%{init: { "theme": "neutral", "themeVariables": { "background":"transparent" } }}%%
+%%{init: {
+  "theme": "base",
+  "logLevel": "fatal",
+  "themeVariables": { "background": "transparent", "primaryTextColor": "#ffffff" },
+  "themeCSS": ".mindmap-node text, .label, .edgeLabel { fill:#ffffff !important; color:#ffffff !important; }"
+}}%%
 mindmap
   root(("insert marketing project focus here"))
     Entry
@@ -335,6 +340,7 @@ mindmap
       "Result / Detail"
       "Export / Share"
       "Saved Variant"
+
 ```
 
 *(In the above example, replace the placeholder root and screen names with the actual project focus and screens from your app. The categories can be adjusted depending on how your screens naturally group together.)*
