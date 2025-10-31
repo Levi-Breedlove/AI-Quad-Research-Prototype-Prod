@@ -315,23 +315,7 @@ Export the mind map to docs/workflows.mmd.
 
 **Template (Mermaid mindmap):**
 ```mermaid
-%%{init: {
-  "theme": "base",
-  "logLevel": "fatal",
-  "themeVariables": {
-    "background": "#0b0f19",
-    "primaryColor": "#1f2937",
-    "primaryTextColor": "#e5e7eb",
-    "lineColor": "#94a3b8",
-    "tertiaryColor": "#334155"
-  },
-  "themeCSS": "
-    .mindmap-node rect, .mindmap-node circle { fill:#1f2937; stroke:#94a3b8; }
-    .mindmap-node path { stroke:#94a3b8; }
-    .mindmap-node text { fill:#e5e7eb; font-weight:500; }
-    .edgeLabel, .label { color:#e5e7eb; fill:#e5e7eb; }
-  "
-}}%%
+%%{init: { "theme": "neutral", "themeVariables": { "background":"transparent" } }}%%
 mindmap
   root(("insert marketing project focus here"))
     Entry
@@ -351,7 +335,6 @@ mindmap
       "Result / Detail"
       "Export / Share"
       "Saved Variant"
-
 ```
 
 *(In the above example, replace the placeholder root and screen names with the actual project focus and screens from your app. The categories can be adjusted depending on how your screens naturally group together.)*
@@ -446,7 +429,7 @@ Stop if any screen from the wireflow diagram does not have a corresponding route
 
 ---
 
-## Step 7 — Portable System Architecture Diagram (Mermaid)
+## Step 7 — Portable System Architecture Diagram ()
 
 **Purpose.** Draft a high-level system architecture before tying it to specific cloud services. This diagram outlines the major pieces of the system (browser, CDNs, APIs, databases, etc.) in a neutral way. It serves as a sanity check that all the necessary components are identified and in the right order, before we implement them on AWS.
 
