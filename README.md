@@ -318,11 +318,30 @@ Export the mind map to docs/workflows.mmd.
 %%{init:{
   "theme":"base",
   "logLevel":"fatal",
-  "themeVariables":{"background":"transparent"},
+  "themeVariables":{
+    "background":"transparent",
+    "textColor":"#ffffff",
+    "primaryTextColor":"#ffffff",
+    "tertiaryTextColor":"#ffffff",
+    "lineColor":"#6b7280"
+  },
   "themeCSS":"
-    .mindmap-node text, .label, .edgeLabel { fill:#ffffff !important; color:#ffffff !important; }
-    .mindmap-node rect, .mindmap-node circle, .mindmap-node polygon { fill:#111827 !important; stroke:#4b5563 !important; }
-    .mindmap-branch path, .edgePath .path { stroke:#64748b !important; }
+    /* make every label truly white */
+    .mindmap-node text,
+    .mindmap-node tspan,
+    .nodeLabel,
+    .label,
+    .edgeLabel,
+    foreignObject,
+    foreignObject .nodeLabel,
+    foreignObject .label { fill:#ffffff !important; color:#ffffff !important; }
+
+    /* muted boxes + edges; no neon */
+    .mindmap-node rect,
+    .mindmap-node circle,
+    .mindmap-node polygon { fill:#111827 !important; stroke:#4b5563 !important; }
+    .mindmap-branch path,
+    .edgePath .path { stroke:#6b7280 !important; }
   "
 }}%%
 mindmap
@@ -344,8 +363,6 @@ mindmap
       "Result / Detail"
       "Export / Share"
       "Saved Variant"
-
-
 ```
 
 *(In the above example, replace the placeholder root and screen names with the actual project focus and screens from your app. The categories can be adjusted depending on how your screens naturally group together.)*
